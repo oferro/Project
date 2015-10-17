@@ -17,31 +17,76 @@
 
 		<link rel="stylesheet" type="text/css" href="css/theme.css">
 
+		<!-- 1. Link to jQuery (1.8 or later), -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+
+		<!-- fotorama.css & fotorama.js. -->
+		<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+
+
 	</head>
 
 	<body>
 		<div class="container">
 			<header>
 				<nav>
-					תפריט
+					<ul class="mnulvl-1">
+						<li><a href="#" target="_top">דף הבית</a></li>
+						<li><a href="#" target="_top">אודות</a></li>
+						<li><a href="#" target="_blank">גלריית עבודות</a>
+							<ul class="mnulvl-2">
+								<li><a href="#" target="_top">שולחנות אוכל</a></li>
+								<li><a href="#" target="_top">מטבחים</a></li>
+								<li><a href="#" target="_top">חדרי שינה</a></li>							
+							</ul>
+						</li>
+						<li><a href="#" target="_top">מבט פנימה</a></li>
+						<li><a href="#" target="_top">צור קשר</a></li>
+					</ul>
 				</nav>
 				<div class="tab-logo">
-					לוגו ופרטים ליצירת קשר
+					<img id="logo" src="/Project/image/oman-gallery.jpg">
+					<p id="logo-text">
+						גלריית האומנים
+						<br/>
+						קיבוץ גזר
+					</p>
 				</div>
 			</header>
 			<article>
 				<div class="pic">
-					תמונות מתחלפות
+					<p>גלריית עבודות</p>
+					<div class="fotorama" 
+							data-nav="thumbs" 
+							data-width="100%" 
+							data-ratio="800/600"
+							data-loop="true"
+							data-autoplay="true"
+							data-direction="rtl">
+						<img src="/Project/image/table-1.jpg" data-caption="שולחן 1">
+						<img src="/Project/image/table-2.jpg" data-caption="table-2">
+						<img src="/Project/image/table-3.jpg" data-caption="table-3">
+						<img src="/Project/image/table-4.jpg" data-caption="table-4">
+					</div>
 				</div>
 				<div class="tab-vision">
-					האני מאמין / חזון של הנגריה
+					<h3>אני מאמין / חזון של הנגריה</h3> 
+					<p>
+						גלריית האומנים נוסדה ב 1973, הנגריה בעלת ניסיון רב, ומתמחה בעיצוב, ייצור ושיווק פינות אוכל, חדרי שינה וסלונים.
+					</p>
+					<p>
+						ההתמחות שלנו הוא ייצור רהיטים מעץ לכלל הבית וכן סלונים, ומערכות ישיבה אצלנו תקבלו שירות אישי המלווה אתכם מתחילת העסקה ועד סופה, הלקוח שותף מלא בתהליך היצור של הפריט אותו רכש.
+					</p>
+					<p>
+						בגלריה שלנו ניתן למצוא סלונים, חדרי שינה, מטבחים, מיזנונים, פינות אוכל, מיטות נוער וחפצי נוי.
+					</p>
 				</div>
 			</article>
 		</div>
 		<footer>
 			כל הזכויות שמורות לנגריית גזר
 		</footer>
-
 	</body>
-
 </html>
