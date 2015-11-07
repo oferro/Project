@@ -18,22 +18,25 @@
 		<link rel="stylesheet" type="text/css" href="css/theme.css">
 
 		<!-- 1. Link to jQuery (1.8 or later), -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<!-- 33 KB -->
 
 		<!-- fotorama.css & fotorama.js. -->
-		<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+		<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+		<!-- 3 KB -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+		<!-- 16 KB -->
 
 		<style>
 			.fotorama__caption {
-					  position: absolute;
-					  z-index: 12;
-					  top: 15px;
-					  left: 0;
-					  font-family: 'Helvetica Neue', Arial, sans-serif;
-					  font-size: 18px;
-					  line-height: 1.5;
-					  color: #000;
+				position: absolute;
+				z-index: 12;
+				top: 10px;
+				left: 0;
+				font-family: 'Helvetica Neue', Arial, sans-serif;
+				font-size: 18px;
+				line-height: 1.5;
+				color: #000;
 			}
 		</style>
 
@@ -44,57 +47,105 @@
 			<header>
 				<nav>
 					<ul class="mnulvl-1">
-						<li><a href="#" target="_top">דף הבית</a></li>
-						<li><a href="#" target="_top">אודות</a></li>
-						<li><a href="#" target="_blank">גלריית עבודות</a>
+						<li>
+							<a href="#" target="_top">דף הבית</a>
+						</li>
+						<li>
+							<a href="#" target="_top">אודות</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">גלריית עבודות</a>
 							<ul class="mnulvl-2">
-								<li><a href="#" target="_top">שולחנות אוכל</a></li>
-								<li><a href="#" target="_top">מטבחים</a></li>
-								<li><a href="#" target="_top">חדרי שינה</a></li>							
+								<li>
+									<a href="#" target="_top">שולחנות אוכל</a>
+								</li>
+								<li>
+									<a href="#" target="_top">מטבחים</a>
+								</li>
+								<li>
+									<a href="#" target="_top">חדרי שינה</a>
+								</li>
 							</ul>
 						</li>
-						<li><a href="#" target="_top">מבט פנימה</a></li>
-						<li><a href="#" target="_top">צור קשר</a></li>
+						<li>
+							<a href="#" target="_top">מבט פנימה</a>
+						</li>
+						<li>
+							<a href="#" target="_top">צור קשר</a>
+						</li>
 					</ul>
 				</nav>
 				<div class="tab-logo">
-					<img id="logo" src="/Project/image/oman-gallery.jpg">
+					<img id="logo" src="image/logo1.png">
 					<p id="logo-text">
 						גלריית האומנים
 						<br/>
 						קיבוץ גזר
 					</p>
 				</div>
+				<div class="logo-contact">
+					<h3>ליעוץ חינם צור קשר</h3>
+					<form id="logo-mail">
+						<ul>
+						<li>
+							<label for="fname">שם *</label>
+							<input type="text" name="fname" maxlength="50" required/>
+						</li>
+						<li>
+							<label for="fphone">טלפון *</label>
+							<input type="text" name="fphone" maxlength="11" required/>
+						</li>
+						<li>
+							<label for="fmail">דוא"ל *</label>
+							<input type="email" name="fmail" maxlength="50" required/>
+						</li>
+						<li>
+							<label for="fmessage">הודעה *</label>
+							<input type="text" name="fmessage" required/>
+						</li>
+						</ul>
+						<p>
+							<input type="submit" value="שלח"/>
+						</p>
+					</form>
+				</div>
 			</header>
 			<article>
+				<div class="tab-vision">
+					<h3>אני מאמין / חזון של הנגריה</h3>
+					<p>
+						מפעל האומנים הוקם בשנת 1974 על ידי חיים
+						ברוך, שהפך את המקצוע לאומנות וכיום מתמקצע
+						בייצור פינות אוכל וריהוט משלים לכל חלל
+						הבית בכל סוגי הריהוט.
+					</p>
+					<p class="p-2nd">
+						המפעל משלב את כל
+						עבודות העץ עם יצירתיות, מקצועיות ודיוק. כלל
+						העבודות מתוכננות בקפידה ומיוצרות מעץ
+						ופרזול איכותיים של מיטב היצרנים בעולם,
+						ברמת הגימור הגבוהה ביותר ומציעות פתרונות
+						לכל בקשה .
+					</p>
+				</div>
 				<div class="pic">
-					<p>גלריית עבודות</p>
-					<div class="fotorama" 
-							data-nav="false" 
-							data-width="100%" 
-							data-ratio="800/600"
-							data-loop="true"
-							arrows="false"
-							
-							data-autoplay="true"
-							data-direction="rtl">
+					<p>
+						גלריית עבודות
+					</p>
+					<div class="fotorama"
+					data-nav="false"
+					data-width="100%"
+					data-ratio="800/600"
+					data-loop="true"
+					arrows="false"
+
+					data-autoplay="true"
+					data-direction="rtl">
 						<img src="/Project/image/table-1.jpg" data-caption="שולחן 1">
 						<img src="/Project/image/table-2.jpg" data-caption="table-2">
 						<img src="/Project/image/table-3.jpg" data-caption="table-3">
 						<img src="/Project/image/table-4.jpg" data-caption="table-4">
 					</div>
-				</div>
-				<div class="tab-vision">
-					<h3>אני מאמין / חזון של הנגריה</h3> 
-					<p>
-						גלריית האומנים נוסדה ב 1973, הנגריה בעלת ניסיון רב, ומתמחה בעיצוב, ייצור ושיווק פינות אוכל, חדרי שינה וסלונים.
-					</p>
-					<p>
-						ההתמחות שלנו הוא ייצור רהיטים מעץ לכלל הבית וכן סלונים, ומערכות ישיבה אצלנו תקבלו שירות אישי המלווה אתכם מתחילת העסקה ועד סופה, הלקוח שותף מלא בתהליך היצור של הפריט אותו רכש.
-					</p>
-					<p>
-						בגלריה שלנו ניתן למצוא סלונים, חדרי שינה, מטבחים, מיזנונים, פינות אוכל, מיטות נוער וחפצי נוי.
-					</p>
 				</div>
 			</article>
 		</div>

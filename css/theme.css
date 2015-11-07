@@ -1,27 +1,50 @@
+@font-face {
+	font-family: "Alef";
+	src: url('../fonts/Alef/Alef-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Alef-Bold";
+	src: url('../fonts/Alef/Alef-Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "felix";
+	src: url('../fonts/felix007/felix007-medium-webfont.ttf') format('truetype'),
+	src: url('../fonts/felix007/felix007-medium-webfont.eot') format('eot'),
+	src: url('../fonts/felix007/felix007-medium-webfont.woff') format('woff');
+}
+
+
 body {
 	margin: 0px;
 	padding:0px;
 	direction: rtl;
 	text-align: right;
+	background: black; /* url('../image/wood-bg-t2.jpg') no-repeat cover; */ 
+	font-family: Alef, Helvetica,'Times New Roman', Arial, sans-serif;
 }
 
-p, a {
+p, a, h3, ul, li {
 	margin:0;
 	padding:0;
+	color: white;
 }
 
 footer {
 	position: fixed;
 	bottom: 0px;
-	right: 18%;
-	background-color: red;
+	left: 14%;
+	font: italic 18px Arial;
+	color: white;
 }
 
 
 
 .container {
 	position: relative;
-	max-width:900px;
+	top: 10px;
+	max-width:1080px;
 	margin: 0 auto;
 }
 
@@ -52,6 +75,7 @@ nav {
 
 .mnulvl-1 li a {
 	text-align:center;
+	font: Arial;
 	color:yellow;
 	display:block;
 	padding: 10px;
@@ -88,12 +112,52 @@ nav {
 
 .tab-logo {
 	position: absolute;
+	top: 0px;
 	left: 1%;
-	width :18%;
+	width :23%;
+}
+
+.tab-logo img {
+	max-width: 100%;
 }
 
 #logo-text {
+	font-family: felix, Arial;
 	text-align: center;
+}
+
+.logo-contact {
+	position:absolute;
+	left: 1%;
+	top: 200px;
+	padding: 5px;
+	margin-top: 30px;
+	border: solid 2px white;
+	background: url('../image/wood-bg-2.jpg');
+}
+
+.logo-contact h3 {
+	text-shadow: 2px 2px 2px blue;
+	text-decoration: underline;
+}
+
+.logo-contact #logo-mail li {
+	margin-bottom: 5px;
+	list-style: none;
+}
+
+.logo-contact #logo-mail li input {
+	width: 150px;	
+}
+
+.logo-contact p input {
+	margin-right: 83%;
+}
+
+.logo-contact #logo-mail label {
+	display:inline-block;
+	font: 15px Arial;
+	width: 50px;
 }
 
 article {
@@ -103,31 +167,39 @@ article {
 }
 
 .pic {
-	width:50%;
+	width:75%;
 	float:right;
 	margin: 0 5px;
-	background-color:lime;
+	border-top: solid 2px yellow;
+}
+
+.pic p {
+	font-size: 24px;
+	text-decoration: underline;
 }
 
 /* http://fotorama.io/set-up/ */
 .fotorama img {
 	width: 95%;
-	height: 90%;
+	height: 70%;
 }
 
 .tab-vision {
 	float:right;
 	margin: 0 5px;
-	width:27%;
-	background-color:aqua;
+	width:75%;
 }
 
 .tab-vision p {
-/*	position:relative; */
 	margin: 1em;
-	font-size: 16px;
+	font-size: 22px;
+}
+
+.tab-vision p .p-2nd {
+	font-size: 18px;
 }
 
 .tab-vision h3 {
 	margin:0;
+	font-size: 28px;
 }
