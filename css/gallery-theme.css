@@ -1,0 +1,39 @@
+#breadcrumbs {
+	margin-bottom: 20px;
+	margin-right: 10px;
+	font-size: 14px;
+}
+
+.tab-art {
+	position: relative;
+	width: 75%;
+}
+
+.tab-art h2 {
+	font-size: 28px;
+	text-decoration:underline;
+	text-shadow: 2px 2px 2px blue;
+	margin: 10px 0;
+}
+
+.tab-art p {
+	margin-bottom: 10px;
+}
+
+#gal-all {
+	width: 800px;
+}
+
+#gal-all p {
+	display:inline-block;
+	width: 30%;
+	margin: 5px 5px 0 0;
+	border: solid 2px orange;
+	text-align: center;
+}
+
+#gal-all img {
+	display:inline-block;
+	width: 90%;
+	margin: 3px;
+}

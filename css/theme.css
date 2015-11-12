@@ -23,6 +23,7 @@ body {
 	text-align: right;
 	background: black; /* url('../image/wood-bg-t2.jpg') no-repeat cover; */ 
 	font-family: Alef, Helvetica,'Times New Roman', Arial, sans-serif;
+	color: white;
 }
 
 p, a, h3, ul, li {
@@ -34,7 +35,7 @@ p, a, h3, ul, li {
 footer {
 	position: fixed;
 	bottom: 0px;
-	left: 14%;
+	left: 10%;
 	font: italic 18px Arial;
 	color: white;
 }
