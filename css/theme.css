@@ -90,8 +90,8 @@ nav select {
 	display:block;
 	padding: 10px;
 	text-decoration: none;
-	background: url(/Project/image/drawer-pic2.jpg) no-repeat;
-	background-size:cover;
+	background: url(../image/drawer-pic.jpg) no-repeat;
+	background-size: cover;
 }
 
 .mnulvl-1 li:hover > ul {
