@@ -1,0 +1,53 @@
+@media screen and (max-width: 850px) {
+	nav img {
+		display: block;
+	}
+
+	.mnulvl-1 {
+		display: none;
+		z-index: 1;
+		position: absolute;
+	}
+
+	.mnulvl-1 li {
+		display: block;
+		clear: both;
+		z-index: 1;
+		margin: 0;
+	}
+
+	.mnulvl-1 li:hover {
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	nav img {
+		display: block;
+	}
+
+	.mnulvl-1 {
+		display: none;
+		z-index: 1;
+		position: absolute;
+	}
+
+	.mnulvl-1 li {
+		display: block;
+		clear: both;
+		z-index: 1;
+		margin: 0;
+	}
+
+	.mnulvl-1 li:hover {
+		font-weight: bold;
+	}
+
+	.logo-contact {
+		display: none;
+	}
+	
+	.tab-art, #mail-contact {
+		width: 100%;
+	}
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="he-il" ng-app="galleryApp">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<meta name="keywords" content="שולחנות אוכל, שולחן אוכל, פינת אוכל, שולחן פינת אוכל,נגריה, עיצוב שולחנות, שולחן, שולחנות, חדר אוכל">
+		<meta name="description" content="נגריית גזר, עיצוב שולחנות פינת אוכל, עיצוב ויצור שולחנות בהתאמה אישית">
+		<title>נגריית גזר - שולחנות פינת אוכל</title>
+		<meta name="author" content="OferR">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+		<link rel="stylesheet" type="text/css" href="css/theme.css">
+		<link rel="stylesheet" type="text/css" href="css/gallery-theme.css">
+		<link rel="stylesheet" type="text/css" href="css/media.css">
+
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<nav>
+					<img onclick="smalMenu()" src="image/menu-icon.png" width="10%"/>
+					<ul class="mnulvl-1" id="mnu">
+						<li>
+							<a href="index.html" target="_top">דף הבית</a>
+						</li>
+						<li>
+							<a href="#" target="_top">אודות</a>
+						</li>
+						<li>
+							<a href="gallery.html" target="_top">גלריית עבודות</a>
+						</li>
+						<li>
+							<a href="#" target="_top">מבט פנימה</a>
+						</li>
+						<li>
+							<a href="#" target="_top">צור קשר</a>
+						</li>
+					</ul>
+				</nav>
+				<div id="left-side">
+					<div class="tab-logo">
+						<img id="logo" src="image/logo1.png">
+						<p id="logo-text">
+							גלריית האומנים
+							<br/>
+							קיבוץ גזר
+						</p>
+					</div>
+					<div class="logo-contact">
+						<h3>ליעוץ חינם צור קשר</h3>
+						<form id="logo-mail">
+							<ul>
+								<li>
+									<label for="fname">שם *</label>
+									<input type="text" name="fname" maxlength="50" required/>
+								</li>
+								<li>
+									<label for="fphone">טלפון *</label>
+									<input type="text" name="fphone" maxlength="11" required/>
+								</li>
+								<li>
+									<label for="fmail">דוא"ל *</label>
+									<input type="email" name="fmail" maxlength="50" required/>
+								</li>
+								<li>
+									<label for="fmessage">הודעה *</label>
+									<input type="text" name="fmessage" required/>
+								</li>
+							</ul>
+							<p>
+								<input type="submit" value="שלח"/>
+							</p>
+						</form>
+					</div>
+				</div>
+			</header>
+			<article>
+				<div ng-controller="galleryCtrl">
+					<div class="sideMenu">
+						<select ng-model="byMenu">
+							<option>פ.אוכל אייפל</option>
+							<option>פ.אוכל ונטורה</option>
+							<option>פ.אוכל דולב</option>
+							<option>פ.אוכל קרוס</option>
+							<option>פ.אוכל אורכידאה</option>
+							<option>פ.אוכל קסטרו</option>
+							<option>פ.אוכל קסטרו מרובע</option>
+							<option>"פ.אוכל מרבלה</option>
+						</select>
+
+					</div>
+					<div id="breadcrumbs">
+						<a class="treelink" title="קישור לאתר הבית" href="index.html">עמוד הבית</a>
+						<span class="treeSep"> > </span>
+						<a class="treelink" title="דף ראשי גלריית עבודות" href="gallery.html">גלריית עבודות</a>
+						<span class="treeSep"> > </span>
+						<span class="treetext">{{item}}</span>
+					</div>
+					<div ng-repeat="itm in items | filter:byMenu">
+						<div class="art-detile">
+							<h2> {{itm.item}} </h2>
+							<div class="art-spec">
+								<h3 class="desc-title"> תאור השולחן: </h3>
+								<table class="art-data">
+									<colgroup>
+										<col class="col-1">
+										<col class="col-2">
+									</colgroup>
+									<tr>
+										<td>רגליים</td>
+										<td>{{itm.foot}}</td>
+									</tr>
+									<tr>
+										<td>מסגרת</td>
+										<td>{{itm.fram}}</td>
+									</tr>
+									<tr>
+										<td>פלטה עליונה</td>
+										<td>{{itm.upPalet}}</td>
+									</tr>
+								</table>
+								<h3 class="desc-title"> התאמות אישיות:</h3>
+								<table class="art-pref">
+									<colgroup>
+										<col class="col-1">
+										<col class="col-2">
+									</colgroup>
+									<tr>
+										<td>אפשרויות להגדלות</td>
+										<td>{{itm.sizeOpt[0]}}
+										<br>
+										{{itm.sizeOpt[1]}}</td>
+									</tr>
+									<tr>
+										<td>אפשרויות סוג עץ</td>
+										<td>{{itm.woodOpt}}</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+
+					<div class="gal-one">
+					<img class="pic-1" src="image/{{itm.pic1}}" alt="{{itm.item}}">
+					<img class="pic-2" src="image/{{itm.pic2}}" />
+					</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<footer>
+			כל הזכויות שמורות לנגריית גזר
+		</footer>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+		<!-- Angular router
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min.js"></script>
+		-->
+		<script src="js/gezer.js"></script>
+	</body>
+</html>

@@ -18,6 +18,10 @@
 
 		<link rel="stylesheet" type="text/css" href="css/theme.css">
 		<link rel="stylesheet" type="text/css" href="css/gallery-theme.css">
+		<link rel="stylesheet" type="text/css" href="css/media.css">
+		
+		<script src="js/gezer.js"></script>
+		
 
 	</head>
 
@@ -25,63 +29,71 @@
 		<div class="container">
 			<header>
 				<nav>
-					<ul class="mnulvl-1">
+					<img onclick="smalMenu()" src="image/menu-icon.png" width="10%"/>
+					<ul class="mnulvl-1" id="mnu">
 						<li>
 							<a href="index.html" target="_top">דף הבית</a>
 						</li>
 						<li>
-							<a href="#" target="_top">אודות</a>
+							<a href="gallery-about.html" target="_top">אודות</a>
 						</li>
 						<li>
-							<a href="#" target="_top">גלריית עבודות</a>
+							<a href="gallery.html" target="_top">גלריית עבודות</a>
 						</li>
 						<li>
 							<a href="#" target="_top">מבט פנימה</a>
 						</li>
 						<li>
-							<a href="#" target="_top">צור קשר</a>
+							<a href="gallery-contact.html" target="_top">צור קשר</a>
 						</li>
 					</ul>
-					<select>
-						<option>תפריט</option>
-						<option value="index.html">דף הבית</option>
-						<option value="#">אודות</option>
-						<option value="gallery.html">גלריית עבודות</option>
-					</select>
+					<div id="nav-small">
+						<img src="image/menu-icon.png" width="10%"/>
+						<select ONCHANGE="location = this.options[this.selectedIndex].value;">
+							<option value="" selected="selected">תפריט</option>
+							<option value="index.html">דף הבית</option>
+							<option value="#">אודות</option>
+							<option value="gallery.html">גלריית עבודות</option>
+						</select>
+					</div>
 				</nav>
-				<div class="tab-logo">
-					<img id="logo" src="image/logo1.png">
-					<p id="logo-text">
-						גלריית האומנים
-						<br/>
-						קיבוץ גזר
-					</p>
-				</div>
-				<div class="logo-contact">
-					<h3>ליעוץ חינם צור קשר</h3>
-					<form id="logo-mail">
-						<ul>
-							<li>
-								<label for="fname">שם *</label>
-								<input type="text" name="fname" maxlength="50" required/>
-							</li>
-							<li>
-								<label for="fphone">טלפון *</label>
-								<input type="text" name="fphone" maxlength="11" required/>
-							</li>
-							<li>
-								<label for="fmail">דוא"ל *</label>
-								<input type="email" name="fmail" maxlength="50" required/>
-							</li>
-							<li>
-								<label for="fmessage">הודעה *</label>
-								<input type="text" name="fmessage" required/>
-							</li>
-						</ul>
-						<p>
-							<input type="submit" value="שלח"/>
+				<div id="left-side">
+					<div class="tab-logo">
+						<img id="logo" src="image/logo1.png">
+						<p id="logo-text">
+							גלריית האומנים
+							<br/>
+							קיבוץ גזר
+							<br />
+							<span>טלפון: 08-9212287, סלולרי: 050-6675777</span>
 						</p>
-					</form>
+					</div>
+					<div class="logo-contact">
+						<h3>ליעוץ חינם צור קשר</h3>
+						<form id="logo-mail">
+							<ul>
+								<li>
+									<label for="fname">שם *</label>
+									<input type="text" name="fname" maxlength="50" required/>
+								</li>
+								<li>
+									<label for="fphone">טלפון *</label>
+									<input type="text" name="fphone" maxlength="11" required/>
+								</li>
+								<li>
+									<label for="fmail">דוא"ל *</label>
+									<input type="email" name="fmail" maxlength="50" required/>
+								</li>
+								<li>
+									<label for="fmessage">הודעה *</label>
+									<input type="text" name="fmessage" required/>
+								</li>
+							</ul>
+							<p>
+								<input type="submit" value="שלח"/>
+							</p>
+						</form>
+					</div>
 				</div>
 			</header>
 			<article>
