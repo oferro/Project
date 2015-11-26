@@ -19,6 +19,11 @@
 	.mnulvl-1 li:hover {
 		font-weight: bold;
 	}
+
+	#contact {
+		width:70%;
+	}
+
 }
 
 @media screen and (max-width: 650px) {
@@ -43,11 +48,33 @@
 		font-weight: bold;
 	}
 
+	.tab-logo {
+		width: 50%;
+	}
+
+	.tab-logo img {
+		width:50%;
+		margin-right: 25%;
+	}
+
+	.tab-logo p {
+		color: yellow;
+	}
+
+	article {
+		top:4em;
+	}
+
+	#about-content, .pic,.tab-art, #mail-contact {
+		width: 95%;
+		margin: 0 auto;
+	}
+
 	.logo-contact {
 		display: none;
-	}
-	
-	.tab-art, #mail-contact {
-		width: 100%;
+	}	
+
+	#contact {
+		width:70%;
 	}
 }

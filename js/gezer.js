@@ -6,13 +6,11 @@
 
 function smalMenu() {
 	var x = document.getElementById("mnu").style.display;
-/*	alert(x); */
-	if ( x === "none") {
-		document.getElementById("mnu").style.display = "block";
-	} else {
+	if ( x === "block") {
 		document.getElementById("mnu").style.display = "none";
+	} else {
+		document.getElementById("mnu").style.display = "block";
 	}
-/*		alert(x); */
 }
 
 function sendMail () {
@@ -20,7 +18,7 @@ function sendMail () {
 //		alert(z.email.value )
 		var email=('ofer.rotshtein@gmail.com');
 
-		var subject = z.subject.value;
+		var subject = 'From Site:' + z.subject.value;
 	
 	//if (z.frm-email-cc.checked = true){
 	//	var cc = z.email.value
@@ -29,14 +27,19 @@ function sendMail () {
 	
 	var body = z.frm-bdy.value;
 	
-	//	document.write( '<a href="
-/*	mailto:(' + email +
+/*	document.getElementById("mail").href = 
+		'mailto:' + email + 
 		'?subject=' +subject+
 		'&cc=' +cc+
-		'&body=' +body+
-		')
-		">' + 'Click here to send feedback' + '<' + '/a>');
-*/}
+		'&body=' +body
+		;
+		alert('mailto:' + email + 
+		'?subject=' +subject+
+		'&cc=' +cc+
+		'&body=' +body');
+*/
+//		">' + 'Click here to send feedback' + '<' + '/a>');
+}
 
 			var app = angular.module("galleryApp", []);
 

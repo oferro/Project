@@ -63,6 +63,10 @@ nav {
 	float: right;
 }
 
+nav img {
+	display:none;
+}
+
 nav select {
 	display: none;
 	/* background: url('../image/menu-icon.png'); */
@@ -129,21 +133,39 @@ nav select {
 
 .tab-logo img {
 	max-width: 100%;
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(0, 185, 233, .75);
+	box-shadow: 0px 0px 15px 5px rgba(0, 185, 233, .75);
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+.tab-logo img:hover {
+	-webkit-box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
+	box-shadow: 0px 0px 15px 10px rgba(255, 255, 255, .75);
 }
 
 #logo-text {
 	font-family: felix, Arial;
+	font-size: 0.8em;
 	text-align: center;
 }
 
 .logo-contact {
 	position:absolute;
+	width:22%;
 	left: 1%;
 	top: 200px;
 	padding: 5px;
-	margin-top: 30px;
+	margin-top: 40px;
 	border: solid 2px white;
 	background: url('../image/wood-bg-2.jpg');
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+}
+
+.logo-contact:hover {
+	-webkit-transform:scale(1.2);
+	transform:scale(1.2);	
 }
 
 .logo-contact h3 {
@@ -172,7 +194,7 @@ nav select {
 
 article {
   	position:relative;
-  	top: 55px;
+  	top: 4em;
 
 }
 
@@ -212,4 +234,43 @@ article {
 .tab-vision h3 {
 	margin:0;
 	font-size: 28px;
+}
+
+#contact {
+	width: 75%;
+}
+
+#about-content {
+	width: 70%;
+	text-align: justify;
+}
+
+#mail-contact {
+	width: 70%;
+}
+
+#mail-contact ul {
+	padding-right: 1em;
+}
+
+#mail-contact li {
+	list-style: none;
+}
+
+#mail-contact .lbl {
+	width: 10em;
+	display: inline-block;
+}
+
+#mail-contact textarea {
+	margin-top: 1em;
+}
+
+#mail-contact button {
+	font-size: 1.2em;
+	color: blue;
+	background-color: yellow;
+	width: 12em;
+	text-align: center;
+	margin-right: 1em;
 }

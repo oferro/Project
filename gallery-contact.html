@@ -122,6 +122,7 @@
 						<br />
 						<span>כתובת :</span> קיבוץ גזר
 					</p>
+					<hr />
 				</div>
 				<form id="mail-contact" onsubmit="sendMail()">
 					<p>
@@ -145,7 +146,7 @@
 							<input type="text" name="subject" required="" maxlength="50" />
 						</li>
 						<li>
-							<textarea name="frm-bdy" form="mail-contact" placeholder="נא פרט את הנושא"></textarea>
+							<textarea name="frm-bdy" form="mail-contact" rows="5" cols="44" placeholder="נא פרט את הנושא"></textarea>
 						</li>
 						<li>
 							<label for="frm-email-cc">שלח העתק למייל שלי</label>
@@ -153,11 +154,12 @@
 						</li>
 						<li>
 							<button id="send-mail" type="submit">
-								שליחת מייל
+								1. בדיקת נתוני שדות למייל
 							</button>
 						</li>
 					</ul>
 				</form>
+							<a id="mail" href="mailto:">לחץ לשליחת המייל</a>
 
 				<div class="pic">
 					<p>
