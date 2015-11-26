@@ -78,3 +78,33 @@
 		width:70%;
 	}
 }
+
+@media print {
+	body {
+		background: white;
+	}
+	
+	body,p, a, h3, ul, li {
+		color: black;
+	}
+	
+	nav, .logo-contact {
+		display: none;
+	}
+	
+	article {
+		top:0.5em;
+	}
+	
+	.pic {
+		width: 70%;
+	}
+	
+	#gal-all {
+	width: 100%;
+	}
+
+	#gal-all p {
+		min-width: 30px;
+	}
+}

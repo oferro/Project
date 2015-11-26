@@ -225,6 +225,7 @@ article {
 .tab-vision p {
 	margin: 1em;
 	font-size: 22px;
+	text-align: justify;
 }
 
 .tab-vision p .p-2nd {

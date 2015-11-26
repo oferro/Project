@@ -48,7 +48,8 @@
 
 .tab-art {
 	position: relative;
-	width: 75%;
+	width: 72%;
+	margin-right: 0.2em;
 }
 
 .tab-art h2 {
@@ -60,14 +61,18 @@
 
 .tab-art p {
 	margin-bottom: 10px;
+	text-align: justify;
 }
 
 #gal-all {
-	width: 800px;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 #gal-all p {
 	display:inline-block;
+	min-width: 200px;
 	width: 30%;
 	margin: 5px 5px 0 0;
 	border: solid 2px orange;
