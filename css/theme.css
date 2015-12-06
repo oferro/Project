@@ -256,11 +256,16 @@ article {
 
 #mail-contact li {
 	list-style: none;
+
 }
 
 #mail-contact .lbl {
 	width: 10em;
 	display: inline-block;
+}
+
+#mail-contact .inpt {
+	font-size: 1em;
 }
 
 #mail-contact textarea {

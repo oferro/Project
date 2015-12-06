@@ -126,26 +126,26 @@
 					</p>
 					<hr />
 				</div>
-				<form id="mail-contact" onsubmit="sendMail()">
+				<form id="mail-contact">
 					<p>
 						* שדות חובה
 					</p>
 					<ul>
 						<li>
 							<label for="frm-name" class="lbl">שם + שם משפחה: *</label>
-							<input type="text" name="frm-name" required="" maxlength="30" />
+							<input class="inpt" type="text" name="frm-name" required="" maxlength="30" />
 						</li>
 						<li>
 							<label for="frm-phone" class="lbl">מספר טלפון לחזרה: *</label>
-							<input type="text" name="frm-phone" required="" maxlength="11" minlength="7" pattern="[0-9,"-"]"/>
+							<input class="inpt" type="text" name="frm-phone" required="" maxlength="11" minlength="7" pattern="[0-9,"-"]"/>
 						</li>
 						<li>
 							<label for="email" class="lbl">דוא"ל:</label>
-							<input type="email" name="email" maxlength="40"/>
+							<input class="inpt" type="email" name="email" maxlength="40"/>
 						</li>
 						<li>
 							<label for="subject" class="lbl">נושא ההודעה: *</label>
-							<input type="text" name="subject" required="" maxlength="50" />
+							<input class="inpt" type="text" name="subject" required="" maxlength="50" />
 						</li>
 						<li>
 							<textarea name="frm-bdy" form="mail-contact" rows="5" cols="44" placeholder="נא פרט את הנושא"></textarea>
@@ -155,7 +155,7 @@
 							<input type="checkbox" name="frm-email-cc" />
 						</li>
 						<li>
-							<button id="send-mail" type="submit">
+							<button id="send-mail" type="button" onclick="sendMail()">
 								1. בדיקת נתוני שדות למייל
 							</button>
 						</li>

@@ -84,25 +84,25 @@
 			</header>
 			<article>
 				<div ng-controller="galleryCtrl">
-					<div class="sideMenu">
-						<select ng-model="byMenu">
-							<option>פ.אוכל אייפל</option>
-							<option>פ.אוכל ונטורה</option>
-							<option>פ.אוכל דולב</option>
-							<option>פ.אוכל קרוס</option>
-							<option>פ.אוכל אורכידאה</option>
-							<option>פ.אוכל קסטרו</option>
-							<option>פ.אוכל קסטרו מרובע</option>
-							<option>"פ.אוכל מרבלה</option>
-						</select>
-
-					</div>
 					<div id="breadcrumbs">
 						<a class="treelink" title="קישור לאתר הבית" href="index.html">עמוד הבית</a>
 						<span class="treeSep"> > </span>
 						<a class="treelink" title="דף ראשי גלריית עבודות" href="gallery.html">גלריית עבודות</a>
 						<span class="treeSep"> > </span>
 						<span class="treetext">{{item}}</span>
+					</div>
+					<div class="sideMenu">
+						<select ng-model="byMenu">
+							<option value="aifel">פ.אוכל אייפל</option>
+							<option value="ventura">פ.אוכל ונטורה</option>
+							<option value="dolev">פ.אוכל דולב</option>
+							<option value="cross">פ.אוכל קרוס</option>
+							<option value="orcidea">פ.אוכל אורכידאה</option>
+							<option value="kastro">פ.אוכל קסטרו</option>
+							<option value="kastro-s">פ.אוכל קסטרו מרובע</option>
+							<option value="marbela">"פ.אוכל מרבלה</option>
+						</select>
+
 					</div>
 					<div ng-repeat="itm in items | filter:byMenu">
 						<div class="art-detile">
