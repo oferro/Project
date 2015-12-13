@@ -130,6 +130,7 @@
 		position: relative;
 		margin-right: 3em;
 		width: 100%;
+		z-index: 0;
 	}
 
 	.tab-logo img {
