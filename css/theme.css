@@ -15,10 +15,6 @@
 	src: url('../fonts/felix007/felix007-medium-webfont.woff') format('woff');
 }
 
-@media screen and (max-width: 850px) {
-	nav ul 		{display: none; }
-	nav select 	{display: inline-block; }
-}
 
 body {
 	margin: 0px;
@@ -125,6 +121,7 @@ nav select {
 /* End of menu style */
 
 .tab-logo {
+	z-index: 1;
 	position: absolute;
 	top: 0px;
 	left: 1%;
@@ -146,15 +143,16 @@ nav select {
 
 #logo-text {
 	font-family: felix, Arial;
-	font-size: 0.8em;
+	font-size: 1.0em;
 	text-align: center;
 }
 
 .logo-contact {
+	z-index: 1;
 	position:absolute;
-	width:22%;
+	width:20%;
 	left: 1%;
-	top: 200px;
+	top: 12em;
 	padding: 5px;
 	margin-top: 40px;
 	border: solid 2px white;
@@ -179,7 +177,7 @@ nav select {
 }
 
 .logo-contact #logo-mail li input {
-	width: 150px;	
+	width: 10em;	
 }
 
 .logo-contact p input {
@@ -189,7 +187,15 @@ nav select {
 .logo-contact #logo-mail label {
 	display:inline-block;
 	font: 15px Arial;
-	width: 50px;
+	width: 3.2em;
+}
+
+.logo-contact #logo-mail #frm-bdy2 {
+	margin-right: 0.6em;	
+}
+	
+.logo-contact #logo-mail #frm-email-cc2, .logo-contact #logo-mail #frm-email-cc2 + label {
+	width: auto;
 }
 
 article {
@@ -224,17 +230,17 @@ article {
 
 .tab-vision p {
 	margin: 1em;
-	font-size: 22px;
+	font-size: 1.5em;
 	text-align: justify;
 }
 
 .tab-vision p .p-2nd {
-	font-size: 18px;
+	font-size: 1.2em;
 }
 
 .tab-vision h3 {
 	margin:0;
-	font-size: 28px;
+	font-size: 2em;
 }
 
 #contact {
@@ -246,8 +252,13 @@ article {
 	text-align: justify;
 }
 
+#about-content p {
+	font-size: 1.1em;
+}
+
 #mail-contact {
-	width: 70%;
+	width: 100%;
+	margin-bottom: 5%;
 }
 
 #mail-contact ul {
@@ -255,8 +266,15 @@ article {
 }
 
 #mail-contact li {
+	height: 2.0em;
 	list-style: none;
+	position: relative;
+}
 
+#mail-contact li:last-child {
+	text-align: center;
+	width: 70%;
+	margin-top: 4em;
 }
 
 #mail-contact .lbl {
@@ -266,11 +284,47 @@ article {
 
 #mail-contact .inpt {
 	font-size: 1em;
+	height: 1.5em;
+	width: 23em;
+	padding: 0.1em 0.2em;
 }
 
 #mail-contact textarea {
 	margin-top: 1em;
 }
+#mail-contact textarea, #mail-contact .inpt {
+	    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+
+#mail-contact textarea:focus, #mail-contact .inpt:focus {
+	border-radius:2px;
+    background: #fff; 
+    border:1px solid #555; 
+    box-shadow: 0 0 3px #aaa; 
+    padding-left:70px;
+    transition: padding .25s;
+ }
+
+#mail-contact textarea:required , #mail-contact .inpt:required {
+	background: #fff url(../image/redMark_s.png) no-repeat 2% center;
+}
+
+#mail-contact textarea:required:valid , #mail-contact .inpt:required:valid {
+	background: #fff url(../image/greenValid_s.png) no-repeat 2% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+
+}
+
+#mail-contact .inpt:focus:invalid {
+    background: #fff url(../image/redInvalid_s.png) no-repeat 2% center;
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+
+}
+
 
 #mail-contact button {
 	font-size: 1.2em;
@@ -280,3 +334,14 @@ article {
 	text-align: center;
 	margin-right: 1em;
 }
+
+#mail-contact button:hover {
+    opacity:.85;
+    cursor: pointer; 
+}
+
+#mail-contact button:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset; 
+}
+

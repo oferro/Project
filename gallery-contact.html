@@ -6,6 +6,7 @@
 		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width">
 
 		<meta name="keywords" content="שולחנות אוכל, שולחן אוכל, פינת אוכל, שולחן פינת אוכל,נגריה, עיצוב שולחנות, שולחן, שולחנות, חדר אוכל">
 		<meta name="description" content="צור קשר, טלפון נגריית גזר, נגריית גזר, עיצוב שולחנות פינת אוכל, עיצוב ויצור שולחנות בהתאמה אישית">
@@ -75,34 +76,10 @@
 							<br/>
 							קיבוץ גזר
 							<br />
-							<span>טלפון: 08-9212287, סלולרי: 050-6675777</span>
+							<span>טלפון: 08-9212287
+								<br />
+								סלולרי: 050-6675777</span>
 						</p>
-					</div>
-					<div class="logo-contact">
-						<h3>ליעוץ חינם צור קשר</h3>
-						<form id="logo-mail">
-							<ul>
-								<li>
-									<label for="fname">שם *</label>
-									<input type="text" name="fname" maxlength="50" required/>
-								</li>
-								<li>
-									<label for="fphone">טלפון *</label>
-									<input type="text" name="fphone" maxlength="11" required/>
-								</li>
-								<li>
-									<label for="fmail">דוא"ל *</label>
-									<input type="email" name="fmail" maxlength="50" required/>
-								</li>
-								<li>
-									<label for="fmessage">הודעה *</label>
-									<input type="text" name="fmessage" required/>
-								</li>
-							</ul>
-							<p>
-								<input type="submit" value="שלח"/>
-							</p>
-						</form>
 					</div>
 				</div>
 			</header>
@@ -114,7 +91,6 @@
 					<span class="treeSep"> > </span>
 					<img src="image/Printer-icon.png" onclick="printPage()" />
 				</div>
-
 				<div id="contact">
 					<h1> נגריית האומנים - גזר </h1>
 					<p>
@@ -124,6 +100,8 @@
 						<br />
 						<span>כתובת :</span> קיבוץ גזר
 					</p>
+					<a href="https://waze.to/li/hsv8v6dy14" target="_blank">Waze - קישור לכתובת של הנגריה 
+						<img src="./image/wazeIcon_s.png"  /> </a>
 					<hr />
 				</div>
 				<form id="mail-contact">
@@ -132,36 +110,35 @@
 					</p>
 					<ul>
 						<li>
-							<label for="frm-name" class="lbl">שם + שם משפחה: *</label>
-							<input class="inpt" type="text" name="frm-name" required="" maxlength="30" />
+							<label for="frm1-name" class="lbl">שם + שם משפחה: *</label>
+							<input class="inpt" type="text" id="frm1-name" required="" maxlength="30" placeholder="נא למלא שדה זה"/>
 						</li>
 						<li>
-							<label for="frm-phone" class="lbl">מספר טלפון לחזרה: *</label>
-							<input class="inpt" type="text" name="frm-phone" required="" maxlength="11" minlength="7" pattern="[0-9,"-"]"/>
+							<label for="frm1-phone" class="lbl">מספר טלפון לחזרה: *</label>
+							<input class="inpt" type="text" id="frm1-phone" required="" placeholder="נא למלא שדה זה" maxlength="11" minlength="7" pattern="[0-9,"-","+"," "]"/>
 						</li>
 						<li>
-							<label for="email" class="lbl">דוא"ל:</label>
-							<input class="inpt" type="email" name="email" maxlength="40"/>
-						</li>
-						<li>
-							<label for="subject" class="lbl">נושא ההודעה: *</label>
-							<input class="inpt" type="text" name="subject" required="" maxlength="50" />
-						</li>
-						<li>
-							<textarea name="frm-bdy" form="mail-contact" rows="5" cols="44" placeholder="נא פרט את הנושא"></textarea>
+							<label for="email1" class="lbl">דוא"ל:</label>
+							<input class="inpt" type="email" id="email1" maxlength="40"/>
 						</li>
 						<li>
 							<label for="frm-email-cc">שלח העתק למייל שלי</label>
-							<input type="checkbox" name="frm-email-cc" />
+							<input type="checkbox" id="frm-email-cc" />
 						</li>
 						<li>
-							<button id="send-mail" type="button" onclick="sendMail()">
-								1. בדיקת נתוני שדות למייל
+							<label for="subject1" class="lbl">נושא ההודעה: *</label>
+							<input class="inpt" type="text" id="subject1" required="" placeholder="נא למלא שדה זה" maxlength="50" />
+						</li>
+						<li>
+							<textarea id="frm-bdy1" form="mail-contact" rows="5" placeholder="נא פרט את הנושא"></textarea>
+						</li>
+						<li>
+							<button id="send-mail" type="submit" onclick="sendMail()">
+								שליחת מייל
 							</button>
 						</li>
 					</ul>
 				</form>
-							<a id="mail" href="mailto:">לחץ לשליחת המייל</a>
 
 				<div class="pic">
 					<p>

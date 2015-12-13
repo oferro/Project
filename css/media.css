@@ -21,12 +21,12 @@
 	}
 
 	#contact {
-		width:70%;
+		width: 70%;
 	}
 
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 635px) {
 	nav img {
 		display: block;
 	}
@@ -53,29 +53,139 @@
 	}
 
 	.tab-logo img {
-		width:50%;
-		margin-right: 25%;
+		width: 70%;
+		margin-right: 15%;
 	}
 
 	.tab-logo p {
 		color: yellow;
 	}
 
-	article {
-		top:4em;
+	.tab-logo #logo-text {
+		font-size: 0.8em;
 	}
 
-	#about-content, .pic,.tab-art, #mail-contact {
+	article {
+		top: 2em;
+	}
+
+	#about-content, .pic, .tab-art, #mail-contact {
 		width: 95%;
 		margin: 0 auto;
 	}
 
+	#about-content h1 {
+		margin-bottom: 2em;
+	}
+
 	.logo-contact {
 		display: none;
-	}	
+	}
 
 	#contact {
-		width:70%;
+		width: 70%;
+	}
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+	nav img {
+		display: block;
+		z-index: 1;
+	}
+
+	.logo-contact {
+		display: none;
+	}
+
+	.tab-vision {
+		width: 100%;
+	}
+	.tab-vision h3 {
+		width: 100%;
+		font-size: 1.5em;
+	}
+
+	.tab-vision p {
+		font-size: 0.9em;
+	}
+
+	.mnulvl-1 {
+		display: none;
+		z-index: 1;
+		position: absolute;
+	}
+
+	.mnulvl-1 li {
+		display: block;
+		clear: both;
+		z-index: 1;
+		margin: 0;
+	}
+
+	.mnulvl-1 li:hover {
+		font-weight: bold;
+	}
+
+	.tab-logo {
+		position: relative;
+		margin-right: 3em;
+		width: 100%;
+	}
+
+	.tab-logo img {
+		position: relative;
+		width: 40%;
+		margin-left: 0.3em;
+		float: left;
+	}
+
+	.tab-logo p {
+		position: relative;
+		color: yellow;
+	}
+
+	article {
+		top: 4em;
+		width: 100%;
+	}
+
+	#about-content, .pic, .tab-art, #mail-contact {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	#about-content li {
+		height: 3em;
+	}
+
+	.logo-contact #logo-mail #frm-email-cc2 {
+		width: 0.5em;
+	}
+	
+	.logo-contact #logo-mail #frm-email-cc2 + label {
+		width: auto;
+	}
+
+	#mail-contact .lbl {
+		font-size: 0.9em;
+		width: 9em;
+	}
+
+	#mail-contact .inpt {
+		width: 7em;
+	}
+
+	#about-content h1 {
+		margin-bottom: 2em;
+		width: 50%;
+	}
+
+	.logo-contact {
+		display: none;
+	}
+
+	#contact {
+		width: 100%;
 	}
 }
 
@@ -83,25 +193,25 @@
 	body {
 		background: white;
 	}
-	
-	body,p, a, h3, ul, li {
+
+	body, p, a, h3, ul, li {
 		color: black;
 	}
-	
+
 	nav, .logo-contact {
 		display: none;
 	}
-	
+
 	article {
-		top:0.5em;
+		top: 0.5em;
 	}
-	
+
 	.pic {
 		width: 70%;
 	}
-	
+
 	#gal-all {
-	width: 100%;
+		width: 100%;
 	}
 
 	#gal-all p {

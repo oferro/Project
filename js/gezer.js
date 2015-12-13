@@ -11,21 +11,90 @@ function smalMenu() {
 	}
 }
 
+function isEmpty (val){
+	return !val;
+}
+
 function sendMail() {
-	var z = document.getElementById("mail-contact");
+
+//  Bring the field data from the form
+	var name = document.getElementById("frm1-name");
+	var phone = document.getElementById("frm1-phone");
 	var email = ('ofer.rotshtein@gmail.com');
-	var subject = 'From Site:' + z.subject.value;
-//	if (z.frm-email-cc.checked) {
-//		var cc = z.email.value;
-//	};
-	var body = z.frm-bdy.value;
-	document.getElementById("mail").href = 
-	'mailto:' + email +
-	'?subject=' +subject+
-	'&cc=' +cc+
-	'&body=' +body
-	;
-	//		">' + 'Click here to send feedback' + '<' + '/a>');
+	var frmBody = document.getElementById("frm-bdy1");
+	var frmSubject = document.getElementById("subject1");
+	var cc = " ", body = " ";
+
+//	Validity check
+	if (isEmpty(name.value)){
+		name.setCustomValidity("נא למלא את שמך כך שנוכל לחזור אליך באופן אישי");
+		return;
+	} else {
+		name.setCustomValidity("");
+	}
+	if (isEmpty(phone.value)){
+		phone.setCustomValidity("נא למלא מספר טלפון שנוכל לחזור אליך ...");
+		return;
+	} else {
+		phone.setCustomValidity("");
+	}
+	if (isEmpty(frmSubject.value)){
+		frmSubject.setCustomValidity("נא למלא את מהות הפניה ...");
+		return;
+	} else {
+		frmSubject.setCustomValidity("");
+	}
+
+//	mack the MAILTO:
+	if (document.getElementById("frm-email-cc").checked) {
+		var cc = document.getElementById("email1").value;
+	};
+	subject = 'מהאתר אינטרנט: ' + name.value + ' - ' + frmSubject.value;
+	body = 'התקבל מ: ' + name.value + ' - ' + phone.value + '%0D%0A' + frmBody.value.replace(/\n/g, "%0D%0A")+ '%0D%0A'  + '%0D%0A' + window.location.href;
+
+//	Send the mail from the client side
+	window.open('mailto:' + email + '?subject=' + subject + '&cc=' + cc + '&body=' + body);
+}
+
+function sendMailSideLogo() {
+
+//  Bring the field data from the form
+	var name = document.getElementById("frm2-name");
+	var phone = document.getElementById("frm2-phone");
+	var email = ('ofer.rotshtein@gmail.com');
+	var frmSubject = document.getElementById("subject2");
+	var frmBody = document.getElementById("frm-bdy2");
+	var cc = " ", body = " ";
+
+//	Validity check
+	if (isEmpty(name.value)){
+		name.setCustomValidity("נא למלא את שמך כך שנוכל לחזור אליך באופן אישי");
+		return;
+	} else {
+		name.setCustomValidity("");
+	}
+	if (isEmpty(phone.value)){
+		phone.setCustomValidity("נא למלא מספר טלפון שנוכל לחזור אליך ...");
+		return;
+	} else {
+		phone.setCustomValidity("");
+	}
+	if (isEmpty(frmSubject.value)){
+		frmSubject.setCustomValidity("נא למלא את מהות הפניה ...");
+		return;
+	} else {
+		frmSubject.setCustomValidity("");
+	}
+
+//	mack the MAILTO:
+	if (document.getElementById("frm-email-cc2").checked) {
+		var cc = document.getElementById("email2").value;
+	};
+	subject = 'מהאתר אינטרנט: ' + name.value + ' - ' + frmSubject.value;
+	body = 'התקבל מ: ' + name.value + ' - ' + phone.value + '%0D%0A' + frmBody.value.replace(/\n/g, "%0D%0A")+ '%0D%0A'  + '%0D%0A' + window.location.href;
+
+//	Send the mail from the client side
+	window.open('mailto:' + email + '?subject=' + subject + '&cc=' + cc + '&body=' + body);
 }
 
 function printPage() {
