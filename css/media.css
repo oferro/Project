@@ -54,7 +54,6 @@
 
 	.tab-logo img {
 		width: 70%;
-		margin-right: 15%;
 	}
 
 	.tab-logo p {
@@ -88,6 +87,10 @@
 }
 
 @media screen and (max-width: 800px) and (orientation: portrait) {
+	nav {
+		width: 100%;
+	}
+
 	nav img {
 		display: block;
 		z-index: 1;
@@ -129,7 +132,7 @@
 	.tab-logo {
 		position: relative;
 		margin-right: 3em;
-		width: 100%;
+		width: 85%;
 		z-index: 0;
 	}
 
@@ -162,7 +165,7 @@
 	.logo-contact #logo-mail #frm-email-cc2 {
 		width: 0.5em;
 	}
-	
+
 	.logo-contact #logo-mail #frm-email-cc2 + label {
 		width: auto;
 	}
@@ -187,6 +190,10 @@
 
 	#contact {
 		width: 100%;
+	}
+
+	#mail-contact textarea:focus, #mail-contact .inpt:focus {
+		padding-left:0px;
 	}
 }
 
